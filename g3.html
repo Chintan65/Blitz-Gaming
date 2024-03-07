@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UNCHARTED: The Lost Legacy™</title>
+    <link href="https://allfont.net/allfont.css?fonts=base-02" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-color: black;
+            width: 950px;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("c16.jpg");
+            background-attachment: scroll;
+            animation: backgroundAnimation 10s infinite alternate;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        .my-button {
+            width: 200px;
+            height: 50px;
+            top: 550px;
+            left: 200px;
+            padding: 10px 20px;
+            background-color: #708090;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            position: absolute;
+            font-family: 'Base 02', arial;
+        }
+
+        .my-button2 {
+            width: 200px;
+            height: 50px;
+            top: 550px;
+            left: 500px;
+            padding: 10px 20px;
+            background-color: #708090;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            position: absolute;
+            font-family: 'Base 02', arial;
+        }
+
+        .my-button:hover {
+            background-color: orange;
+            color: black;
+        }
+
+        .my-button2:hover {
+            background-color: orange;
+            color: black;
+        }
+
+        @keyframes buttonAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .images-container {
+            display: flex;
+        }
+
+        .image12,
+        .image14,
+        .image17 {
+            width: 400px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .image12.loaded,
+        .image14.loaded,
+        .image17.loaded {
+            opacity: 1;
+        }
+
+        .image12 {
+            margin: 1000px 70px 10px 10px;
+        }
+
+        .image14 {
+            margin: 1000px 70px 10px 70px;
+        }
+
+        .image17 {
+            margin: 1000px 10px 10px 70px;
+        }
+
+        .image11 {
+            margin-top: 400px;
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+        }
+        
+        
+        .text-next-to-image11 {
+            position: absolute;
+            text-align:center;
+            top: 1700px;
+            left: 1000px; 
+            color: white;
+            font-family: 'base 02', arial;
+            font-size: 20px;
+            width: 400px; 
+        }
+
+        .text-next-to-image12,
+        .text-next-to-image14,
+        .text-next-to-image17 {
+            position: absolute;
+            text-align: center;
+            top: 1300px;
+            left: 0px;
+            color: white;
+            font-family: 'base 02', arial;
+            font-size: 20px;
+            width: 400px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .text-next-to-image12.loaded,
+        .text-next-to-image14.loaded,
+        .text-next-to-image17.loaded {
+            opacity: 1;
+        }
+
+        .text-next-to-image14 {
+            left: 550px;
+        }
+
+        .text-next-to-image17 {
+            left: 1100px;
+        }
+        
+        .background-cover-div {
+            background-image: url("c18.png");
+            background-size: cover;
+            margin-top: 100px;
+            width: 1500px; 
+            height: 500px;
+        }
+
+        .info {
+            background: url("c13.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin-top: 100px;
+            padding: 60px;
+            width: 1500px;
+            font-family: 'base 02', arial;
+            font-size: 25px;
+            color: black;
+        }
+
+        .custom-paragraph {
+            color: white;
+            text-align: center;
+            margin-top: 110vh;
+            font-family: 'base 02', arial;
+            font-size: 25px;
+            position: absolute;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+    </style>
+    <script>
+        setTimeout(function () {
+            var elementsToAnimate = document.querySelectorAll('.image12, .image14, .image17, .text-next-to-image12, .text-next-to-image14, .text-next-to-image17');
+            elementsToAnimate.forEach(function (element) {
+                element.classList.add('loaded');
+            });
+        }, 3000);
+
+	function sony() {
+            var websiteUrl = 'https://www.naughtydog.com/blog/uncharted_the_lost_legacy_is_out_now_on_ps4';
+            window.open(websiteUrl, '_blank');
+        }
+      
+        function sony2() {
+            var websiteUrl = 'https://www.playstation.com/en-in/uncharted/';
+            window.open(websiteUrl, '_blank');
+        }
+    </script>
+</head>
+<body class="no-scroll">
+     
+  <button class="my-button" onclick="sony()"><strong>PLAY NOW</strong></button>
+    <button class="my-button2" onclick="sony2()"><strong>SEE ALL FEATURES</strong></button>
+    <p class="custom-paragraph" id="autoReveal">
+        <strong>Key Features</strong>
+    </p>
+    <div class="images-container">
+        <img class="image12" src="c12.jpg" alt="image12">
+        <img class="image14" src="c14.jpg" alt="image14">
+        <img class="image17" src="c17.jpg" alt="image17">
+    </div>
+    <img class="image11" src="c11.jpg" alt="image11">
+    <div class="text-next-to-image11">
+        <p>In order to recover an ancient artifact and keep it out of the hands of a ruthless warmonger, seasoned adventurer Chloe Frazer must enlist the aid of renowned mercenary Nadine Ross. Together, they venture to India’s Western Ghats to locate the Golden Tusk of Ganesh. In Chloe’s greatest journey yet, she must confront her past and decide what she’s willing to sacrifice to forge her own legacy.</p>
+    </div>
+    <div class="text-next-to-image12">
+        <p>An all-new setting UNCHARTED: The Lost Legacy takes the series to the south-western coast of the Indian peninsula — the home of the former Hoysala Empire — featuring an exotic mix of urban, jungle and ancient ruins environments.</p>
+    </div>
+    <div class="text-next-to-image14">
+        <p>Dynamic gameplay UNCHARTED: The Lost Legacy builds upon the series’ acclaimed gameplay with new systems and refinements, including cinematic combat, exploration and traversal of jaw-dropping environments, complex puzzles and more.</p>
+    </div>
+    <div class="text-next-to-image17">
+        <p>UNCHARTED legacy Expect the trademark action-packed set pieces and captivating narrative that fans have come to expect from Naughty Dog and the UNCHARTED series.</p>
+    </div>
+    <div class="background-cover-div"></div>
+    <div class="info">
+        <p style="text-align:left"><strong>browse games&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;latest news&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forums&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;careers</strong></p>
+    </div>
+</body>
+</html>

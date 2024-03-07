@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Need For Speed™</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap">
+    <style>
+         body {
+            background-color: black;
+            width: 450px;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("c5.jpg");
+            background-attachment: scroll;
+            animation: backgroundAnimation 10s infinite alternate;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0; 
+            }
+            100% {
+                background-position: 100% 0; 
+            }
+        }
+
+        .my-button {
+            width: 200px;
+            height: 50px;
+            top: 400px;
+            left: 100px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 25px;
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: background-color 0.3s;
+            animation: buttonAnimation 2s ease-in-out infinite alternate; 
+        }
+
+        .my-button2 {
+            width: 200px;
+            height: 50px;
+            top: 400px;
+            left: 350px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: background-color 0.3s;
+            animation: buttonAnimation 2s ease-in-out infinite alternate;
+        }
+
+        .my-button:hover {
+            background-color: orange; 
+            color: white; 
+        }
+
+        .my-button2:hover {
+            background-color: orange; 
+            color: white; 
+        }
+
+        @keyframes buttonAnimation {
+            0% {
+                transform: scale(1); 
+            }
+            100% {
+                transform: scale(1.1); 
+            }
+        }
+
+        .custom-paragraph {
+            color: white;
+            text-align: left;
+            margin-top: 90px;
+            padding: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s, padding 0.5s;
+        }
+ 
+         .revealed {
+            padding: 58px;
+            height: auto;
+        }
+
+        .imageNFS {
+   	   margin: -80px 80px 0px 100px;
+           width: 1000px;
+           display: block; 
+           max-width: 100%;          
+	   height: auto; 
+           
+}
+
+        .image6 {
+            margin: 550px 5px 0 70px; 
+            width: 850px;
+        }
+
+        .image7 {
+            margin: 100px 5px 0px 600px; 
+            width: 800px;
+        }
+        .image8 {
+            margin: 100px 5px 0 100px; 
+            width: 800px;
+        }
+        .text-next-to-image6 {
+            position: absolute;
+            text-align:center;
+            top: 950px;
+            left: 950px; 
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 500px; 
+        }
+        .text-next-to-image7 {
+            position: absolute;
+            text-align:center;
+            top: 1550px;
+            right: 950px; 
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 500px; 
+        }
+        .text-next-to-image8 {
+            position: absolute;
+            text-align:center;
+            top: 2100px;
+            left: 1000px; 
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 400px; 
+        } 
+       .video-container {
+        width: 800px;
+        height: 450px;
+        position: absolute;
+        top: 2650px;
+        left: 20px;
+        z-index: 1;
+        background-image: url("c10.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+        .full-screen-video {
+            width: 100vw; 
+            height: 100vh; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2; 
+            background-color: black;
+        }
+        .info {
+        background: url("c10.jpg") no-repeat center center fixed;
+        background-size: cover;
+        margin: 875px 0px 0px 0px;
+        padding: 30px;
+        width: 1500px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 25px;
+        color:white;
+    }
+    </style>
+</head>
+<body class="no-scroll"> 
+    <button class="my-button" onclick="nfs()"><strong>PLAY NOW</strong></button>
+    <button class="my-button2" onclick="nfs2()"><strong>SEE ALL FEATURES</strong></button>
+    <p class="custom-paragraph" id="autoReveal">
+        <strong>Reignite the pursuit with EA Play*. Need for Speed™ Hot Pursuit Remastered is now on The Play List.</strong>
+    </p>
+    
+    <img class="imageNFS" src="NFS.png" alt="imageNFS">
+
+    <img class="image6" src="c6.jpg" alt="image6">
+    <div class="text-next-to-image6">
+        <p>Outrun the law or bring them to justice in the ultimate high-stakes pursuit.
+Feel the adrenaline rush as you race through the city streets and countryside at blazing speeds.
+Customize your car with a variety of performance upgrades and visual mods to create the perfect machine for your driving style.
+Use a variety of gadgets and weapons to outsmart your opponents and escape the cops.
+Master the art of driving evasively and outmaneuvering your pursuers.</p>
+    </div>
+
+    <img class="image7" src="c7.jpg" alt="image7">
+    <div class="text-next-to-image7">
+        <p>Experience the thrill of the chase as you race against time to avoid arrest or take down your quarry.
+Become the most wanted racer or the most feared cop in the city.
+Feel the roar of the engine and the wind in your hair as you push your car to its limits.
+Leave your rivals behind in the dust and become the ultimate Need for Speed Hot Pursuit champion.
+Ignite the pursuit and experience the ultimate thrill of the chase!</p>
+    </div>
+
+     <img class="image8" src="c8.jpg" alt="image8">
+    <div class="text-next-to-image8">
+        <p>Push your limits, break the rules, and become a legend.The only way to win is to never give up.I'm not afraid of the cops. I'm the one they should be afraid of.I'm the master of the open road. I'm the king of the streets.The chase is my life. Speed is my passion.There's no better feeling than leaving the cops in the dust.The road is my battlefield, and the only law is survival.</p>
+    </div>
+     
+    <div class="video-container">
+        <video controls width="auto" height="auto">
+            <source src="NFSv.mp4" type="video/mp4">
+        </video>
+    </div>
+   
+    <div class="info">
+        <p style="text-align:center"><strong>browse games&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;latest news&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ea forums&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;careers</p>
+
+    </div>
+        
+    
+    <script>
+        setTimeout(function() {
+            const customParagraph = document.getElementById('autoReveal');
+            customParagraph.classList.add('revealed');
+        }, 50); 
+       
+        const videoContainer = document.getElementById('videoContainer');
+        function toggleFullScreenVideo() {
+            const video = videoContainer.querySelector('video');
+            video.classList.toggle('full-screen-video');
+        }
+        videoContainer.addEventListener('click', toggleFullScreenVideo);
+
+        function nfs() {
+            var websiteUrl = 'https://www.ea.com/games/need-for-speed/need-for-speed-hot-pursuit-remastered/buy';
+            window.open(websiteUrl, '_blank');
+        }
+      
+        function nfs2() {
+            var websiteUrl = 'https://www.ea.com/games/need-for-speed/need-for-speed-hot-pursuit-remastered/news/now-on-ea-play';
+            window.open(websiteUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

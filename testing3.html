@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLITZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            opacity: 0; /* Initially set to invisible */
+            animation: fade-in 2s ease forwards; /* Animation for fading in */
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            /* Adjust this value as needed to control the thickness of the black line */
+            background-color: black;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            background-color: #f9f9f9;
+        }
+
+        nav li {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav li a {
+            color: #0b0606;
+            text-decoration: none;
+        }
+
+        nav li:hover {
+            background-color: #3a9bcc;
+        }
+
+        .active {
+            background-color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-image: url('icon_background.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-color:rgb(28, 72, 218); */
+        }
+
+        .game-box {
+            flex-basis: calc(33.33% - 10px);
+            /* Adjust the width and margin as needed */
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 5px;
+            /* Reduced the margin */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-box img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .game-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .main_image {
+            display: flex;
+            height: fit-content;
+            height: 900px;
+            background-attachment: scroll;
+            z-index: -1;
+            /* Lower the z-index to place it behind the content */
+            opacity: 0; /* Initially set to invisible */
+            animation: fade-in 2s ease forwards; /* Animation for fading in */
+        }
+
+        .main_image-text {
+            position: absolute;
+            top: 40px;
+            /* Adjust the top position as needed */
+            left: 1px;
+            /* Adjust the left position as needed */
+            color: white;
+            font-size: 90px;
+            font-weight: bold;
+            text-align: left;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-left: 0px;
+            animation: slide-in 2s ease;
+        }
+
+        /* Define a sliding animation */
+        @keyframes slide-in {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* Define a fade-in animation */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Remove text and add a background for the game-box links */
+        .game-box a {
+            display: block;
+            text-decoration: none;
+            background-color: #e3eef3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .game-box a:hover {
+            background-color: #3498db;
+        }
+
+        .banner_image {
+            display: flex;
+            justify-content: center;
+            /* Center the content horizontally */
+            align-items: center;
+            /* Center the content vertically */
+            height: 400px;
+            /* Set your desired height */
+            background-image: url('banner_image.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki">Home</a></li>
+                <li><a href="https://en.wikipedia.org/wiki">About</a></li>
+                <li><a href="https://en.wikipedia.org/wiki">Services</a></li>
+                <li><a href="https://en.wikipedia.org/wiki">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_image">
+        <img src="main_image.jpg">
+        <div class="main_image-text">
+            <pre><h3>
+    BLITZ 
+ the new way 
+ of gaming</h3></pre>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="game-box">
+            <a href="g1.html">
+                <img src="call_off_duty.jpg" alt="Call off duty">
+            </a>
+        </div>
+        <!-- Add more game boxes here -->
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="banner_image">
+        <img src="banner_image.jpeg" alt="banner_image" usemap="#banner_image">
+        <map name="banner_image">
+            <area shape="rect" coords="164,233,298,280" href="pic1.jpg">
+            <area shape="rect" coords="952,378,1083,425" href="learn_more.html">
+        </map>
+    </div>
+</body>
+
+</html>

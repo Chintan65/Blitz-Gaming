@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FI 23</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap">
+    <style>
+        body {
+            background-color: black;
+            width: 450px;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("i1.jpg");
+            background-attachment: scroll;
+            animation: backgroundAnimation 10s infinite alternate;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        .my-button {
+            width: 200px;
+            height: 50px;
+            top: 400px;
+            left: 100px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 25px;
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: background-color 0.3s;
+            animation: buttonAnimation 2s ease-in-out infinite alternate;
+        }
+
+        .my-button2 {
+            width: 200px;
+            height: 50px;
+            top: 400px;
+            left: 350px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: background-color 0.3s;
+            animation: buttonAnimation 2s ease-in-out infinite alternate;
+        }
+
+        .my-button:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .my-button2:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        @keyframes buttonAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .custom-paragraph {
+            color: white;
+            text-align: left;
+            margin-top: 90px;
+            padding: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s, padding 0.5s;
+        }
+
+        .revealed {
+            padding: 58px;
+            height: auto;
+        }
+
+        .imageNFS {
+            margin: -80px 80px 0px 100px;
+            width: 1000px;
+            display: block;
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .image6 {
+            margin: 550px 5px 0 70px;
+            width: 850px;
+        }
+
+        .image7 {
+            margin: 100px 5px 0px 600px;
+            width: 800px;
+        }
+
+        .image8 {
+            margin: 100px 5px 0 100px;
+            width: 800px;
+        }
+
+        .text-next-to-image6 {
+            position: absolute;
+            text-align: center;
+            top: 950px;
+            left: 950px;
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 500px;
+        }
+
+        .text-next-to-image7 {
+            position: absolute;
+            text-align: center;
+            top: 1550px;
+            right: 950px;
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 500px;
+        }
+
+        .text-next-to-image8 {
+            position: absolute;
+            text-align: center;
+            top: 2100px;
+            left: 1000px;
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 400px;
+        }
+
+        .video-container {
+            width: 800px;
+            height: 450px;
+            position: absolute;
+            top: 2650px;
+            left: 20px;
+            z-index: 1;
+            background-image: url("i4.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .full-screen-video {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background-color: black;
+        }
+
+        .info {
+            background: url("i4.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin: 875px 0px 0px 0px;
+            padding: 30px;
+            width: 1500px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="no-scroll">
+    <button class="my-button" onclick="nfs()"><strong>PLAY NOW</strong></button>
+    <button class="my-button2" onclick="nfs2()"><strong>SEE ALL FEATURES</strong></button>
+    <p class="custom-paragraph" id="autoReveal">
+        <strong>Be the last to brake in EA SPORTS™ F1® 23
+            Available to play now</strong>
+    </p>
+
+    <img class="imageNFS" src="fi23_name.jpg" alt="FI23">
+
+    <img class="image6" src="i2.jpg" alt="i2">
+    <div class="text-next-to-image6">
+        <br>
+        <br>
+        <br>
+        <p>Be the last to brake in F1® 23
+            AVAILABLE </p>
+        <p> PLAY NOW
+            Buy the F1® 23 Champions Edition and receive Max Verstappen designed in-game items, 4 New My Team Racing
+            icons, F1® World Bumper Pack and 18,000 PitCoin Virtual currency to spend in-game.</p>
+    </div>
+
+    <img class="image7" src="i3.jpg" alt="i3">
+    <div class="text-next-to-image7">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p> F1® 23 PATCH NOTES (v1.10)
+            Some big additions and a fan-favourite
+            Australian arrive with this F1@ 23 patch</p>
+    </div>
+
+    <img class="image8" src="i4.jpg" alt="i4">
+    <div class="text-next-to-image8">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>Multiple tweaks and improvements have been made including locked Goals and the incorrect F2™ season order.
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="video-container">
+        <video controls width="auto" height="auto">
+            <source src="F1® 23 ｜ Official Reveal Trailer.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="info">
+        <p style="text-align:center"><strong>browse games&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;latest
+                news&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ea
+                forums&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;careers</p>
+
+    </div>
+
+
+    <script>
+        setTimeout(function () {
+            const customParagraph = document.getElementById('autoReveal');
+            customParagraph.classList.add('revealed');
+        }, 50);
+
+        const videoContainer = document.getElementById('videoContainer');
+        function toggleFullScreenVideo() {
+            const video = videoContainer.querySelector('video');
+            video.classList.toggle('full-screen-video');
+        }
+        videoContainer.addEventListener('click', toggleFullScreenVideo);
+
+        function nfs() {
+            var websiteUrl = 'https://www.ea.com/games/need-for-speed/need-for-speed-hot-pursuit-remastered/buy';
+            window.open(websiteUrl, '_blank');
+        }
+
+        function nfs2() {
+            var websiteUrl = 'https://www.ea.com/games/need-for-speed/need-for-speed-hot-pursuit-remastered/news/now-on-ea-play';
+            window.open(websiteUrl, '_blank');
+        }
+    </script>
+</body>
+
+</html>

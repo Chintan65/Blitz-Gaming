@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLITZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+        
+            background-color: black;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            background-color: #f9f9f9;
+        }
+
+        nav li {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav li a {
+            color: #0b0606;
+            text-decoration: none;
+        }
+
+        nav li:hover {
+            background-color: #3a9bcc;
+        }
+
+        .active {
+            background-color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-image: url('icon_background.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+         
+        }
+
+        .game-box {
+            flex-basis: calc(33.33% - 10px);
+          
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 5px;
+           
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-box img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .game-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .main_image {
+            display: flex;
+            height: fit-content;
+            height: 900px;
+            background-attachment: scroll;
+            z-index: -1;
+           
+        }
+
+        .main_image-text {
+            position: absolute;
+            top: 40px;
+           
+            left: 1px;
+        
+            color: white;
+            font-size: 90px;
+            font-weight: bold;
+            text-align: left;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-left: 0px;
+            animation: slide-in 2s ease;
+        }
+
+        /* Define a sliding animation */
+        @keyframes slide-in {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+       
+        .game-box a {
+            display: block;
+            text-decoration: none;
+            background-color: #e3eef3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .game-box a:hover {
+            background-color: #3498db;
+        }
+
+
+        /* CSS for the Latest News Placard */
+        .news-placard {
+            background-color: #174b9d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-align: center;
+            animation: slide-in 1s ease;
+        }
+
+        .news-articles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .news-article {
+            width: calc(33.33% - 20px);
+           
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #931515;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .news-article:hover {
+            transform: scale(1.05);
+        }
+
+        .news-article img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .news-article h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .news-article p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .news-article a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Keyframe animation for sliding in */
+        @keyframes slide-in {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+        .banner_image {
+            display: flex;
+            justify-content: center;
+            /* Center the content horizontally */
+            align-items: center;
+            /* Center the content vertically */
+            height: 400px;
+            /* Set your desired height */
+            background-image: url('banner_image.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        /* Styles for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            /* Dark background color */
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Styles for the links in the dropdown menu */
+        .dropdown-content a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 16px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0099CC;
+            /* Dark blue accent color on hover */
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#">Games &#9662;</a>
+                    <ul class="dropdown-content">
+                        <li><a href="g1.html">Call of Duty</a></li>
+                        <li><a href="g2.html">Need for Speed</a></li>
+                        <li><a href="g3.html">Unchartered</a></li>
+                        <li><a href="g4.html">FI 23</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="blitz_play.html">Play Pass</a></li>
+                <li><a href="about.html">About</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_image">
+        <img src="main_image.jpg">
+        <div class="main_image-text">
+            <pre><h2>
+ BLITZ
+ GAMING  
+</h2></pre>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="game-box">
+            <a href="g1.html">
+                <img src="call_off_duty.jpg" alt="Call off duty">
+            </a>
+        </div>
+        <div class="game-box">
+            <a href="g2.html">
+                <img src="nfs_image.jpg" alt="Need for Speed">
+            </a>
+        </div>
+        <div class="game-box">
+            <a href="g3.html">
+                <img src="unchartered_image.jpg" alt="unchartered">
+            </a>
+        </div>
+        <div class="game-box">
+            <a href="g4.html">
+                <img src="fi23.jpg" alt="fi23">
+            </a>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <div class="news-placard">
+        <h2>Latest News</h2>
+        <div class="news-articles">
+            <div class="news-article">
+                <img src="news_image1.jpg" alt="News Image 1">
+                <h3>Criterion Games joins BLITZ</h3>
+                <p>
+                    Entertainment
+                    The studio is added to our world-class
+                    Battlefield studios.</p>
+
+            </div>
+            <div class="news-article">
+                <img src="news_image2.jpg" alt="News Image 2">
+                <h3>Sharing Our 2023 Impact Report</h3>
+                <p>
+
+                    How EA is creating long-term value for our people, our players, our society, and the planet.</p>
+
+            </div>
+            <div class="news-article">
+                <img src="news_image3.jpg" alt="News Image 3">
+                <h3>The all new EA app for Mac </h3>
+                <p>The EA app for Mac will soon replace
+                    Origin as our primary Mac platform.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <div class="banner_image">
+        <img src="banner_image.jpeg" alt="banner_image" usemap="#banner_image">
+        <map name="banner_image">
+            <area shape="rect" coords="164,233,298,280" href="blitz_play.html">
+            <area shape="rect" coords="952,378,1083,425" href="learn_more.html">
+        </map>
+    </div>
+
+    <div
+        style="background-image: url('c10.jpg'); background-size: cover; padding: 50px 0; text-align: center; color: white; font-family: Arial, sans-serif;">
+        <p><strong>Browse Games</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Latest
+                News</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Help
+                Center</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>EA
+                Forums</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>About
+                Us</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Careers</strong></p>
+    </div>
+
+</body>
+
+</html>

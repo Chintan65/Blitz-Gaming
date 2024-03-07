@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        .form {
+            font-size: 26px;
+            font-weight: 100;
+            font-style: normal;
+            font-variant: normal;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: normal;
+
+            /* border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            height: 100%;
+            width: 96%; */
+            padding-left: 2%;
+            padding-right: 1.5%;
+
+
+            border: 3px solid black;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            /* background-color: rgba(237, 244, 247, 0.9);  */
+            height: 100%;
+            margin: 20px auto;
+            max-width: 96%;
+            border-radius: 10px;
+            /* outline: dashed 5px solid red; */
+            outline: 2px dashed #007bff;
+
+        }
+
+/* text shadow used inline for h1 */
+
+
+
+        .backimage {
+            background-image: url("form_image.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-blend-mode: color;
+
+        }
+
+        .submit-button {
+            font-size: 20px;
+            width: 150px;
+            height: 40px;
+            padding: 10px 20px;
+        }
+
+        .reset-button {
+            font-size: 20px;
+            width: 150px;
+            height: 40px;
+            padding: 10px 20px;
+        }
+    </style>
+
+</head>
+
+
+<body align="center" class="backimage">
+
+    <script>
+        function df() {
+            var x = document.getElementById('full_name');
+
+        }
+    </script>
+
+
+    <hr>
+    <h1 align="center" style="text-shadow: 5px 5px #9db9d7;">Registration Form</h1>
+    <hr>
+    <form name="form" action="practical3_2.html" method="get" class="form">
+
+
+
+
+        <div style="width: 100%;">
+            <div style="width: 50%; height: 100px; float: left;;">
+                <br><br><br><br>
+
+                Full Name:
+                <input type="text" name="full_name" id="full_name">
+                <br>
+                <br>
+
+                Gender:
+                <input type="radio" name="gender" value="male">
+                Male
+
+                <input type="radio" name="gender" value="female">
+                Female
+                <br>
+                <br>
+
+                Date of Birth:
+                <input type="date" name="dob" id="dob">
+                <br>
+                <br>
+
+                Email:
+                <input type="email" name="email" id="email">
+                <br>
+                <br>
+
+                Password:
+                <input type="password" name="password" id="password">
+                <br>
+                <br>
+
+
+                Address:
+                <textarea id="address" name="address" rows="4" cols="50"></textarea>
+                <br>
+                <br>
+
+
+                Languages:
+                <input type="checkbox" name="languages" value="hindi">
+                <label for="hindi">Hindi</label>
+
+                <input type="checkbox" name="languages" value="english">
+                <label for="english">English</label>
+
+                <input type="checkbox" name="languages" value="gujarati">
+                <label for="gujarati">Gujarati</label>
+                <br>
+                <br>
+            </div>
+            <div style="margin-left: 50%; height: 100px;;">
+                <br><br><br><br>
+
+
+                programing languages :
+                <select name="programing_language" id="programing_language" multiple>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Perl">Perl</option>
+                    <option value="SQl">SQl</option>
+                    <option value="PHP">PHP</option>
+                </select><br><br><br>
+
+
+                Job Title :
+                <select name="job" id="job">
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                    <option value="NLP specialist">NLP specialist</option>
+                    <option value="other">other</option>
+                </select><br><br><br>
+
+
+                Country:
+                <input type="text" name="country">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Register" class="submit-button">
+                <input type="reset" value="reset" class="reset-button">
+
+            </div>
+
+        </div>
+
+    </form>
+</body>
+
+</html>

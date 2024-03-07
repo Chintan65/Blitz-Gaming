@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Call of Duty</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap">
+    <style>
+         body {
+            background-color: black;
+            width: 400px;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("MW-MP-VIDEOS-TOUT.jpg");
+            background-attachment: scroll;
+            animation: backgroundAnimation 10s infinite alternate;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0; /* Initial position */
+            }
+            100% {
+                background-position: 100% 0; /* Final position */
+            }
+        }
+
+        .my-button {
+            width: 200px;
+            height: 50px;
+            top: 300px;
+            left: 1100px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 25px;
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+            transition: background-color 0.3s;
+            animation: buttonAnimation 2s ease-in-out infinite alternate; /* Apply button animation */
+        }
+
+        .my-button2 {
+            width: 200px;
+            height: 50px;
+            top: 600px;
+            left: 650px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 25px;
+            position: absolute;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .my-button:hover {
+            background-color: orange; /* Change the background color on hover */
+            color: white; /* Change the text color on hover */
+        }
+
+        .my-button2:hover {
+            background-color: orange; /* Change the background color on hover */
+            color: white; /* Change the text color on hover */
+        }
+
+        @keyframes buttonAnimation {
+            0% {
+                transform: scale(1); /* Initial scale */
+            }
+            100% {
+                transform: scale(1.1); /* Scaled up */
+            }
+        }
+
+        .custom-paragraph {
+            color: white;
+            text-align: left;
+            margin-top: 90px;
+            padding: 90px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .image1 {
+            margin: 350px 5px 0 5px; 
+            width: 800px;
+        }
+
+        .image2 {
+            margin: 100px 5px 0px 660px; 
+            width: 800px;
+        }
+        .image3 {
+            margin: 100px 5px 0 5px; 
+            width: 800px;
+        }
+        .image4 {
+            margin: 100px 5px 0px 660px; 
+            width: 800px;
+        }
+        
+
+        .text-next-to-image1 {
+            position: absolute;
+            text-align:center;
+            top: 880px;
+            left: 900px; 
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 500px; 
+        }
+        .text-next-to-image2 {
+            position: absolute;
+            text-align:center;
+            top: 1440px;
+            right: 900px; 
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 500px; 
+        }
+        .text-next-to-image3 {
+            position: absolute;
+            text-align:center;
+            top: 2000px;
+            left: 900px; 
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 400px; 
+        }
+        .text-next-to-image4 {
+            position: absolute;
+            text-align:center;
+            top: 2550px;
+            right: 900px; 
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 25px;
+            width: 400px; 
+        }
+        .info {
+            background: url("c19.jpg") no-repeat center center fixed;
+            background-size: cover;
+            margin-top: 100px;
+            padding: 60px;
+            width: 1500px;
+            text-align:center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 35px;
+            color: white;
+        }
+        
+        
+       
+    </style>
+</head>
+<body class="no-scroll"> 
+ 
+    <button class="my-button" onclick="cod()"><strong>PLAY</strong></button>
+    <button class="my-button2" onclick="cod2()"><strong>SEE ALL FEATURES</strong></button>
+    <p class="custom-paragraph">
+        <strong>EA SPORTS™ Call of Duty Modern Warfare is out now on PlayStation®5, PlayStation®4, Xbox Series X|S, Xbox One, Nintendo Switch™, and Steam®. Available on the EA App at a later date.</strong>
+    </p>
+
+    <img class="image1" src="c1.jpg" alt="image1">
+    <div class="text-next-to-image1">
+        <p>"Bullets whizzing, grenades exploding, and the battlefield ablaze as we charge into the heart of the enemy's stronghold!.With sweat on our brows and determination in our hearts, we push forward, leaving a trail of fallen foes in our wake.Under the cover of darkness, we infiltrate the enemy base, knives at the ready, silent as ghosts, striking fear into the hearts of our adversaries.The roar of tanks and the thunder of helicopters overhead as we engage in an all-out war, fighting for every inch of ground.In the heat of battle, adrenaline surging, we unleash a barrage of gunfire, taking down wave after wave of enemy soldiers."</p>
+    </div>
+
+    <img class="image2" src="c2.jpg" alt="image2">
+    <div class="text-next-to-image2">
+        <p>"Explosions rock the battlefield, debris flying everywhere, as we make a last stand against overwhelming odds.From the rooftops to the sewers, we engage the enemy in a relentless pursuit, never letting them escape our sights.In a desperate escape, we race against time, dodging bullets and explosions, determined to complete the mission at any cost.With our backs against the wall, we rally together, fighting with unwavering resolve, refusing to yield to the enemy's onslaught.In the heart-pounding climax, we face off against the enemy's elite forces, engaging in an epic showdown that will determine the fate of the world."</p>
+    </div>
+
+     <img class="image3" src="c3.jpg" alt="image3">
+    <div class="text-next-to-image3">
+        <p>"Bullets whiz by as you sprint through a war-torn city, seeking cover amidst the chaos.The deafening roar of helicopter blades fills the air as you unleash a hail of gunfire on enemy forces below.Grenades explode in a fiery spectacle, sending enemies flying in every direction.With adrenaline pumping, you breach a room, executing a flawless takedown on unsuspecting terrorists.A high-speed chase through narrow streets, bullets trading between vehicles in a desperate bid for survival."</p>
+    </div>
+
+     <img class="image4" src="c4.jpg" alt="image4">
+    <div class="text-next-to-image4">
+        <p>"Swapping out magazines, you prepare for the final showdown in a dimly lit, smoke-filled warehouse.A tense standoff on a precarious rooftop, with snipers lining up their shots in a deadly game of cat and mouse.Infiltrating an enemy stronghold, you plant explosives and make a daring escape before the base erupts in flames.As night falls, you navigate a dense jungle, relying on your night vision goggles to spot lurking threats.The iconic "Call of Duty" theme blares as you charge into battle, knowing that victory depends on your skill and determination."</p>
+    </div>
+     <div class="info">
+        <p><strong>browse games&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;latest news&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forums&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;about us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;careers</strong></p>
+    </div>
+
+   <script>
+       function cod() {
+            var websiteUrl = 'https://www.callofduty.com/modernwarfare';
+            window.open(websiteUrl, '_blank');
+        }
+      
+        function cod2() {
+            var websiteUrl = 'https://www.callofduty.com/#';
+            window.open(websiteUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
